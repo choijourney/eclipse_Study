@@ -4,7 +4,7 @@ public class Tires {
 	// field
 	public int maxRotation; // 최대회전수
 	public int accumulatedRotation; // 누적회전수
-	public String location;
+	public String location; // 타이어의 위치
 
 	// 생성자
 	public Tires(String location, int maxRotation) {

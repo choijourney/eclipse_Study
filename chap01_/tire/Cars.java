@@ -1,7 +1,7 @@
 package chap01_.tire;
 
 public class Cars {
-	// field
+	// field 타입이 Tires 인 필드들
 	public Tires frontLeftTire = new Tires("앞왼쪽", 6);
 	public Tires frontRightTire = new Tires("앞오른쪽", 2);
 	public Tires backLeftTire = new Tires("뒤왼쪽", 3);
