@@ -1,0 +1,5 @@
+package chap01_;
+
+public enum Week {
+	MONDAY, TUESDAY, WEDNESDAY, THURSDAH, FIRDAY, SATURDAY, SUNDAY
+}
