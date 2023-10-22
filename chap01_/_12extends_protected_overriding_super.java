@@ -3,13 +3,12 @@ package chap01_;
 import chap01_.airplane.SuperSonicAirPlane;
 import chap01_.computer.Calculator;
 import chap01_.computer.Computer;
-import chap01_.phone.CellPhone;
 import chap01_.phone.DmbPhone;
 
-public class _12 extends CellPhone {
-	public _12() { // 부모 생성자에 매개변수를 써야하는경우 자식클래스 생성자의
-		super("애플", "블랙"); // super 매개변수에 부모생성자 매개변수를 써야함
-	}
+public class _12extends_protected_overriding_super {
+//	public _12() { // 부모 생성자에 매개변수가 있을때, 자식클래스 생성자의
+//		super("애플", "블랙"); // super 매개변수에 부모생성자 매개변수를 써야함
+//	}
 
 	public static void main(String[] args) {
 		// 클래스 상속 extends 혼공자 41강
@@ -20,8 +19,8 @@ public class _12 extends CellPhone {
 		System.out.println(dmb.getModel());
 		System.out.println(dmb.getColor());
 		System.out.println(dmb.getChannel());
-		// CellPhone을 상속받아서 DmbPhone객체만 생성해도 CellPhone메서드를
-		// 쓸수있다
+		// DmbPhone이 CellPhone을 상속받아서 DmbPhone객체만 생성해도 
+		// CellPhone메서드를 쓸수있다
 		dmb.powerOn();
 		dmb.bell();
 		dmb.sendVoice("여보세용");
@@ -57,7 +56,7 @@ public class _12 extends CellPhone {
 		// 부모클래스의 메서드를 자식클래스에서 수정하여 사용
 		// 부모 메서드와 동일한 시그니처를 가져야함
 		// 타입,메서드이름,매개변수타입이 모두같아야함
-		// 접근제한을 더 좁은범위로 재정의 할수없음 (예를들어 부모가 defalte인데
+		// 접근제한을 더 좁은범위로 재정의 할수없음 (예를들어 부모가 default인데
 		// 자식이 private으로 할수없음. public은 가능)
 		// 새로운 예외를 throws 할수없음
 		// 메소드가 재정의될경우 자식객체의 메소드를 호출하면 재정의된

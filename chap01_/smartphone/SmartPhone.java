@@ -1,6 +1,6 @@
 package chap01_.smartphone;
 
-public class SmartPhone {
+public class SmartPhone { // toString 재정의
 	private String company;
 	private String os;
 

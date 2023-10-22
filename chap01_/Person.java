@@ -8,10 +8,12 @@ public class Person {
 	final String nation = "Korean";
 	final String ssn;
 	String name;
+//	name="k";   필드는 클래스안에서 업데이트가 안된다? 오류남. 
 
 	public Person(String ssn, String name) {
 		this.ssn = ssn;
 		this.name = name;
+
 	}
 
 	// 정적 final 필드 상수를 대문자로작성

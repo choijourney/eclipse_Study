@@ -1,6 +1,8 @@
 package chap01_;
 
-public class _06 {
+import java.util.Arrays;
+
+public class _06main_Arrays_equals_multiArray_arraycopy_enum {
 
 	public static void main(String[] args) {
 		// 메인메서드의 String[] args 에대해..
@@ -23,7 +25,7 @@ public class _06 {
 		// 명령프롬프트에서도 args를 입력해서 total값을 출력할수있다
 		// 혼공자 23강- 자바배열(2) 에 나옴
 
-		// 배열 : 같은 타임의 데이터를 연속된 공간에 나열하고,
+		// 배열 : 같은 타입의 데이터를 연속된 공간에 나열하고,
 		// 각 데이터에 인덱스를 부여한 자료구조
 
 		System.out.println("----");
@@ -76,11 +78,25 @@ public class _06 {
 		System.out.println(strArray[0] == strArray[1]); // true
 		System.out.println(strArray[0] == strArray[2]); // false
 
+		// 기본타입 배열도 참조타입이다
+
+		int[] in = { 1 };
+		int[] in1 = { 1 };
+		boolean a = in == in1;
+		boolean b = in[0] == in1[0];
+		boolean c = in.equals(in1); // 쓰면안됨
+		System.out.println(a); // false
+		System.out.println(b); // true
+		System.out.println(c); // false
+		// 배열 내부값을 비교할때 in.equals로 비교하니 true일줄 알았는데 false.
+		System.out.println(Arrays.equals(in, in1)); // true
+		// 배열 내부값 비교할땐 Arrays.equals를 써야한다
+
 		// 배열 복사 System.arraycopy()
 		String[] oldStrArray = { "java", "array", "copy" };
 		String[] newStrArray = new String[5];
 		System.arraycopy(oldStrArray, 0, newStrArray, 0, oldStrArray.length);
-		// (원본배열, 어디서부터 복사할건지 인덱스, 새배열,인덱스, 몇개복사할건지개수)
+		// (원본배열, 어디서부터 복사할건지 인덱스, 새배열, 인덱스, 몇개복사할건지개수)
 		// oldStrArray의 번지수를 복사해서 newStrArray객체를 만든다
 		// java array copy null null 출력
 

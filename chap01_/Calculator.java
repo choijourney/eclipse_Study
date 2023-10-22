@@ -51,7 +51,7 @@ public class Calculator {
 		System.out.println(message);
 	}
 
-	// 직사각형 너비 구하기
+	// 직사각형 너비 구하기 메서드오버로딩
 	double areaRectangle(double width) {
 		return width * width;
 	}

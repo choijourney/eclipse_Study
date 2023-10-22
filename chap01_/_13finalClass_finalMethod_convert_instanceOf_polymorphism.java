@@ -6,14 +6,15 @@ import chap01_.driver.Taxi;
 import chap01_.driver.Vehicle;
 import chap01_.inherit.Child;
 import chap01_.inherit.Parent;
+import chap01_.phone.CellPhone;
 import chap01_.tire.Cars;
 import chap01_.tire.HankookTire;
 import chap01_.tire.KumhoTire;
 
-public class _13 {
+public class _13finalClass_finalMethod_convert_instanceOf_polymorphism {
 
 	public static void main(String[] args) {
-		// final 해당선언이 최종이며 수정될수 없음을 의미
+		// final : 해당선언이 최종이며 수정될수 없음을 의미
 
 		// 클래스앞에 final이 오면 부모가될수없다 상속할수없다
 		// 메서드앞에 final이 오면 오버라이딩할수없다 재정의할수업다
@@ -34,19 +35,19 @@ public class _13 {
 		// 접근가능. 자식클래스 메소드 접근불가. 예외적으로, 부모의 메소드가
 		// 자식클래스에서 재정의 될경우 자식클래스의 메소드가 호출. @
 
-//		Parent parent =new Child();
+//		Parent parent =new Child(); 이렇게써도됨
 		Child child = new Child();
 		Parent parent = child;
 
 		parent.method1(); // 부모메서드 호출
 		parent.method2(); // 자식클래스에서 오버라이딩돼서 자식메서드호출
-//		parent.method3();	// 자식메서드 사용불가.
+//		parent.method3();	// 자식 단독메서드 사용불가.
 
 		// 다형성 : 객체 사용방법은 동일하나 메소드재정의와 타입변환으로
-		// 실행결화가 다양하게 나오는 성질.
+		// 실행결과가 다양하게 나오는 성질.
 		// 필드의 다형성
 		// 필드 타입을 부모타입으로 선언할경우
-		// 다양한 자식객체가 저장되어 필드사용 결과가 달라질수있음
+		// 다양한 자식객체를 저장할수있어 필드사용 결과가 달라질수있음
 		Cars cars = new Cars();
 
 		for (int i = 1; i <= 5; i++) {
@@ -94,6 +95,7 @@ public class _13 {
 		driver.driver(bus);
 		driver.driver(taxi);
 
+		
 		// 객체도 강제 타입변환 가능하다
 		// 자식타입이 부모타입으로 자동타입변환 후 다시 반대로 변환할때만 가능.
 		// Parent parent = new Child(); 자동타입변환

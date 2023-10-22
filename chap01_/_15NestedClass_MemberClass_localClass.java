@@ -7,7 +7,7 @@ import chap01_.implementation.InterfaceA;
 import chap01_.implementation.InterfaceB;
 import chap01_.implementation.InterfaceC;
 
-public class _15 {
+public class _15NestedClass_MemberClass_localClass {
 
 	public static void main(String[] args) {
 		// 인터페이스는 다중상속가능
@@ -38,6 +38,7 @@ public class _15 {
 		// 로컬 클래스: 생성자나 메서드 안에서 선언되는 중첩클래스
 		// 메서드안에서만 사용가능한 클래스
 		// 생성자나 메서드가 실행할때만 사용됨
+		// 로컬클래스에서 매개변수나 로컬변수는 final특성임(final이 생략돼있음)
 
 		// 인스턴스멤버 클래스
 		// 인스턴스 필드와 메서드만 선언 가능하다
@@ -56,16 +57,17 @@ public class _15 {
 //		}
 
 		// A클래스 외부
-		A a = new A(); // a패키지.A클래스 A객체 만든후
+		A a = new A(); // a패키지.A클래스 A객체 만든후 (a패키지가있음)
 		A.B b = a.new B(); // B객체 만듦
 
 		b.field1 = 3;
 		b.method1();
-
+		// C는 정적멤버클래스
 		A.C c = new A.C(); // A객체가 없어도 클래스이름으로 바로 C객체 생성가능
 		c.field3 = 4; // C객체생성해서 C클래스의 인스턴스멤버 호출
 
 		A.C.field4 = 5; // 정적필드는 객체없이 클래스이름으로 호출가능
+
 		A.C.method4();
 
 		a.method5(); // 로컬클래스가 있는 메서드
@@ -101,8 +103,8 @@ public class _15 {
 //				C var2 = new C();		가능	
 //			}
 //			
-//		}  B클래스는 A클래스가 필요해서 A클래스가 필요하지않은 static으로
-		// 만들수 없다.
+//		}  B클래스는 A클래스가 필요해서
+		// A클래스가 필요하지않은 static으로 만들수 없다.
 
 		// 멤버 클래스에서 사용제한. 중첩클래스의 메서드안에서 사용제한
 //		class A {
@@ -119,14 +121,14 @@ public class _15 {
 //			class B {
 //				void method() {
 //					field1 = 10;
-//					method1();
+//					method1();	   가능
 
 //					field2= 10;
-//					method2();
+//					method2();	   가능
 //				}
 //			}
 //			
-//			중첩 인스턴스 클래스에선 인스턴스멤버,정적멤버 모두 접근가능하다
+//			중첩 인스턴스 클래스 B에선 인스턴스멤버,정적멤버 모두 접근가능하다
 //			
 //			static class C {
 //				void method() {
@@ -137,18 +139,17 @@ public class _15 {
 //					method2();
 //				}
 //			}
-//			B클래스는 A클래스가 필요해서 A클래스가 필요하지않은 
-//			static 클래스 안에서 쓸수 없다.
+//			
 //			
 //		}
 		System.out.println("----");
 
-		// 로컬 클래스에서 바깥클래스 참조얻기
+		// 중첩 클래스에서 바깥클래스 참조얻기
 		// 바깥클래스.this.필드
 		// A1.this.methodM(); a패키지.A1 보면있음
-		A1 a1 = new A1();
-		A1.Nested nested = a1.new Nested();
-		nested.print();
+		A1 a1 = new A1(); // 바깥클래스 먼저 객체생성
+		A1.Nested nested = a1.new Nested(); // 중첩클래스 객체생성후
+		nested.print(); // 메서드 호츨가능
 
 	}
 

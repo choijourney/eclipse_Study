@@ -4,7 +4,7 @@ import java.util.Date;
 
 import chap01_.smartphone.SmartPhone;
 
-public class _18 {
+public class _18toString_SystemClass_exit_nanoTime_getClass {
 
 	public static void main(String[] args) throws ClassNotFoundException {
 		// Object 클래스의 메서드들 이어서..
@@ -19,10 +19,10 @@ public class _18 {
 
 		System.out.println(obj1.toString());// java.lang.Object@2133c8f8
 		System.out.println(obj2); // Thu Oct 19 19:57:46 KST 2023
-
-		// Date 클래스(내장클래스)에서 toString을 재정의해서 날짜를 출력하게함
-
 		// toString을 생략해도, 자동으로 toString을 호출해서 출력함
+		// Date 클래스(내장클래스)에서 toString을 재정의해서 날짜를 출력함
+
+		
 
 		SmartPhone myPhone = new SmartPhone("구글", "안드로이드");
 
@@ -72,7 +72,7 @@ public class _18 {
 		// 7748400 나노초 = 0.0077초
 
 		System.out.println("----");
-
+ 
 		// Class 클래스
 		// 자바는 클래스와 인터페이스의 메타데이터를 Class클래스로 관리
 		// 메타데이터 : 데이터를 설명하는 데이터
@@ -105,7 +105,7 @@ public class _18 {
 		// 필드정보,메서드정보,생성자 정보등도 class객체를 얻어서 이용할수있다
 		// API doc에서보면 getFields(),getMethods(),getConstructors()
 
-		Class c4 = _18.class;
+		Class c4 = _18toString_SystemClass_exit_nanoTime_getClass.class;
 		// 현재클래스 객체를 얻음. 현재클래스객체를 기준으로 위치를 얻을거다.
 		String photo1Path = c4.getResource("photo1.jpg").getPath();
 		// getResource로 url객체를 얻고 getPath로 전체경로를 얻는다

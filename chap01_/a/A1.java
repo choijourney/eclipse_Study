@@ -57,7 +57,7 @@ public class A1 {
 		System.out.println("Outter - method");
 	}
 
-	public class Nested { // 중첩클래스
+	public class Nested { // 인스턴스멤버 중첩클래스
 		public String fi = "Nested - field";
 
 		public void methodM() {

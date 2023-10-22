@@ -1,6 +1,6 @@
 package chap01_;
 
-public class _07 {
+public class _07field_constructor_overriding_this {
 
 	public static void main(String[] args) {
 		// 객체 지향 프로그래밍 : 집합/사용 관계에 있는 객체를 하나씩

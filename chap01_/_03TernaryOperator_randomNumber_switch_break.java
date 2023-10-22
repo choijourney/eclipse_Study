@@ -2,7 +2,7 @@ package chap01_;
 
 import java.util.Random;
 
-public class _03 {
+public class _03TernaryOperator_randomNumber_switch_break {
 
 	public static void main(String[] args) {
 		// 연산자 : 연산에 사용되는 표시나 기호 + -
@@ -16,7 +16,7 @@ public class _03 {
 
 		byte b = 100;
 //		byte result2 = -b;  오류남
-		int result2 = -b; // int이하 정수 연산은 int로 타입이 바뀐다
+		int result2 = -b; // int미만 정수 연산은 int로 타입이 바뀐다
 
 		System.out.println("----");
 		// 단항 연산자 ++i
@@ -43,7 +43,7 @@ public class _03 {
 		System.out.println(z); // 25
 		System.out.println(y); // 11
 
-		// !논리부정연산자 반대로만듦 boolean타입에만 가능
+		// !논리부정연산자 반대로값을바꿈 boolean타입에만 가능
 		boolean play = true;
 		play = !play;
 		System.out.println(play); // false

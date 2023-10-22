@@ -1,6 +1,6 @@
 package chap01_;
 
-public class _10 {
+public class _10singleton_final_static_final {
 
 	public static void main(String[] args) {
 		// 싱글톤 혼공자 36강

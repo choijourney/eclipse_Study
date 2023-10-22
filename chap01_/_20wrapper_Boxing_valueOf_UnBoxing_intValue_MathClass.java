@@ -1,6 +1,6 @@
 package chap01_;
 
-public class _20 {
+public class _20wrapper_Boxing_valueOf_UnBoxing_intValue_MathClass {
 	public static void main(String[] args) {
 		// Wrapper클래스
 		// 포장객체 기본타입의 값을 내부에 두고 포장
@@ -49,7 +49,7 @@ public class _20 {
 		System.out.println(ob1 == ob2); // 다른객체를 참조해서 false
 		// 그런데 범위에 따라 값을 비교할때도 있다.
 		// boolean true false 나 char \u0000~ -u007f
-		// byte,short,int -128~ 127 의 범위 일때는
+		// byte,short,int -128~ 127 의 범위 일때는,
 		// 값이 같을때 참조객체를 하나만 만들어서 ==을 했을때 true가 나온다
 		// 그러니까 위의 범위일때는 == !=를 써도 값을 비교하는 효과가 있다
 		Integer ob3 = 10;
@@ -61,6 +61,8 @@ public class _20 {
 
 		System.out.println(ob1.equals(ob2)); // true
 		System.out.println(ob3.equals(ob4)); // true
+
+		// Math 클래스 static 메서드임
 
 		// 절대값 리턴
 		int v1 = Math.abs(-5); // 5

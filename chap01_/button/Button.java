@@ -1,6 +1,6 @@
 package chap01_.button;
 
-public class Button {
+public class Button { // 중첩인터페이스
 	OnClickListener listener;
 
 	public void setOnClickListener(OnClickListener listener) {

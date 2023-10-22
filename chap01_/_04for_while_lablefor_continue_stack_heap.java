@@ -1,6 +1,6 @@
 package chap01_;
 
-public class _04 {
+public class _04for_while_lablefor_continue_stack_heap {
 
 	public static void main(String[] args) {
 		// for 문 밖에서의 i값은?
@@ -54,7 +54,7 @@ public class _04 {
 				if (lower == 'g') {
 					break outter;
 				}
-			}
+			} // A-a A-b A-c A-d A-e A-f A-g
 		}
 
 		System.out.println("----");
@@ -70,7 +70,7 @@ public class _04 {
 				}
 				System.out.println(upper1 + "--" + lower1);
 				// if break문의 위치에 따라 d까지 출력될지 c까지 출력될지 다름
-			}
+			} // A--a A--b A--c
 
 		}
 
@@ -91,13 +91,12 @@ public class _04 {
 		// 참조타입변수는 스택영역에 저장된다 번지수와 함께 저장
 		// 값은 힙영역에 번지수를 가진 객체로 저장된다
 		// <힙 영역> 100번지 "홍길동"
-		// 스택영역의 참조타입변수가 힙영역의 번지수를 참조해서 참조타입
+		// 스택영역의 변수가 힙영역의 번지수를 참조해서 참조타입
 
 		// 참조타입 변수간의 == 는 두 변수가 참조하는 객체가 같은지 비교하는것
 
 		// 참조타입 변수는 객체를 참조하지 않는다는 뜻으로 null값을 가질수 있다
 		// null 로 초기화된 참조변수도 스택영역에 생성
-		// var1 = null 현재 참조객체가 없다
 
 		// String타입 참조 방식
 		String name1 = "고길동";

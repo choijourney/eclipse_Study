@@ -2,7 +2,7 @@ package chap01_;
 
 import java.util.Scanner;
 
-public class _02 {
+public class _02Double_ParseDouble_String_valueOf_KeyCode {
 
 	public static void main(String[] args) throws Exception {
 		// + 연산 에서 문자열 자동 타입변환
@@ -40,7 +40,7 @@ public class _02 {
 
 		// printf
 		System.out.printf("이름 : %1$s, 나이 : %2$d \n", "김자바", 25);
-		// 이름 : 김자바, 나이 : 25 1$ : 첫번째값 s: String
+		// 이름 : 김자바, 나이 : 25 / 1$ : 첫번째값 / s: String
 		// 1$ 따로 순서를 안적으면 "김자바", 25 순서대로 값이 대입돼서 출력
 
 		System.out.printf("%-6d \n", 333); // 333___ 왼쪽정렬

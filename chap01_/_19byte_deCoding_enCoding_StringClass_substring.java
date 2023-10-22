@@ -2,11 +2,11 @@ package chap01_;
 
 import java.io.IOException;
 
-public class _19 {
+public class _19byte_deCoding_enCoding_StringClass_substring {
 
 	public static void main(String[] args) throws IOException {
 		// String 클래스
-		// String 생성자 직접 String 객체를 생성
+		// String 생성자를 이용해 직접 String 객체를 생성할 수 있다
 		// new String()은 byte를 문자열로 변환시킨다
 		byte[] bytes = { 72, 101, 108, 108, 111, 32, 74, 97, 118, 97 };
 
@@ -19,9 +19,6 @@ public class _19 {
 		System.out.println(str4); // Java 출력
 
 		// 디코딩 - 알아듣는 문자로 번역하는것
-
-		// 지정한 문자셋으로 디코딩 모르겠음
-		// String str = new String(byte[] bytes1, String charSetName);
 
 		// 원래 숫자를 문자열로 바꾸면
 		int ints = 101;
@@ -36,8 +33,8 @@ public class _19 {
 
 //		String str5 = new String(bytes2, 0, readByteNo - 2);
 //		System.out.println(str5); // 인덱스위치부터 length만큼
-		// -2는 엔터 키코드 빼기 입력한 키코드만 출력
-		// hello엔터 를 했을때 hello 만 출력
+		// -2는 엔터 키코드 빼기. 입력한 키코드만 출력
+		// hello엔터를 했을때 hello 만 출력
 
 		// 문자 추출 charAt()메서드
 		// 인덱스의 문자를 리턴
@@ -45,7 +42,8 @@ public class _19 {
 		char charVal = subject.charAt(3);
 		System.out.println(charVal); // 프 출력
 
-		// 문자열을 바이트로 인코딩 getBytes() 바이트배열로 변환
+		// 문자열을 바이트로 바꾸는 것을 인코딩이라 함
+		// getBytes() 바이트배열로 변환
 		// 이클립스의 디폴트 문자셋으로 인코딩된 바이트 배열 리턴
 		String str6 = "안녕하세요";
 		byte[] byte1 = str6.getBytes();
@@ -59,6 +57,7 @@ public class _19 {
 		System.out.println(str7); // 안녕하세요
 
 		System.out.println("----");
+		
 		// getBytes(Charset charset) 은 특정 문자셋으로 인코딩된 바이트 배열 리턴
 		byte[] byte2 = str6.getBytes("EUC-KR"); // EUC-KR은 한글 한글자당 2바이트
 		System.out.println(byte2.length); // 10

@@ -5,14 +5,15 @@ import chap01_.makecar.hankook.SnowTire;
 //import chap01_.makecar.hankook.Tire;   객체생성할때 전체이름씀
 import chap01_.makecar.kumho.BigWidthTire;
 
-public class _11 {
+public class _11class_import_package_setter_getter_access {
 	// 클래스에서 다른 패키지에 있는 클래스 불러오기
-	// 이름이 같은 클래스는 헷갈릴수 있어서 타입 자리에 전체이름을 써줘야함
+	// 이름이 같은 클래스는 헷갈릴수 있어서 타입 자리에 전체이름을 써줘야함  import는 안해도됨
 	SnowTire snowTire = new SnowTire();
 	BigWidthTire bigTire = new BigWidthTire();
 	chap01_.makecar.kumho.Tire tire1 = new chap01_.makecar.kumho.Tire();
 	chap01_.makecar.hankook.Tire tire2 = new chap01_.makecar.hankook.Tire();
-
+	 
+	
 	// 클래스에서 tire2.name 를 쓰려면 그냥 쓰면 안되고
 	// 메서드 안이나 생성자에서써야함
 	void method1() {

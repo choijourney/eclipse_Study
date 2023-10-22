@@ -1,9 +1,12 @@
 package chap01_.wake;
 
 public class Work {
-	public Wake field = new Wake() {
+	public Wake field = new Wake() { // 익명자식객체
+		int i = 1; // final테스트
+
 		public void work() {
 			System.out.println("출근 합니다.");
+			i = 2; // 필드 선언시 익명자식객체는 final이 아니다
 		}
 
 		// 부모클래스 오버라이딩
@@ -17,8 +20,11 @@ public class Work {
 	public void method1() {
 		// Wake 변수는 final상수임
 		Wake field6 = new Wake() { // new Wake부터 익명자식객체
+			int k = 1; // final 테스트
+
 			public void walk() {
 				System.out.println("산책합니다.");
+				k = 2; // 메서드내부 익명객체도 final이 아니다
 			}
 
 			public void wake() {
@@ -27,6 +33,7 @@ public class Work {
 			}; // field6는 부모타입변수라 자식객체에 접근을 못해서
 		}; // 부모메서드를 재정의한 wake안에 자식메서드인 walk메서드를 썼다
 		field6.wake();
+
 	}
 
 	// 매개변수에 익명자식객체를 써서 자식객체의 오버라이딩한 wake메서드 사용

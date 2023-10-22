@@ -16,7 +16,7 @@ import chap01_.vehicleinterface.Bus1;
 import chap01_.vehicleinterface.Driver1;
 import chap01_.vehicleinterface.Taxi1;
 
-public class _14 {
+public class _14abstractclass_method_interface {
 
 	public static void main(String[] args) {
 		// 추상 클래스 선언 abstract
@@ -74,7 +74,7 @@ public class _14 {
 		// int method1(); 앞에 abstract를 써도되고
 		// 인터페이스가 abstract특성을 갖고있어서 보통 생략해서쓴다
 
-		// 구현하는 클래스에서 인터페이스 상수를 사용할때는 인터페이스이름.상수 로쓰면됨
+		// 구현하는 클래스에서 인터페이스 상수를 사용할때는 인터페이스변수.상수 로쓰면됨
 		// RemoteControl.MAX_VOLUME
 		// 인터페이스는 변수타입을 인터페이스 이름으로 함
 		RemoteControl rc;

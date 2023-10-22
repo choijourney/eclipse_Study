@@ -1,6 +1,6 @@
 package chap01_;
 
-public class _09 {
+public class _09method_overloading_instanceMember_staticMethod {
 
 	public static void main(String[] args) {
 		// 메서드안에 메서드 사용하기
@@ -17,7 +17,7 @@ public class _09 {
 		// double매개변수에 int매개변수를 썼을때
 		int x = 10;
 		double y = 20.3;
-		// plus( x , y); 아래 plus메서드를 썼다고 가정
+		// 아래 plus메서드에 대입해보면
 		// x는 int고 y는 double 이지만 int가 double로 자동형변환이 가능해서
 		// 에러 없이 작동한다
 
@@ -28,7 +28,7 @@ public class _09 {
 
 		// 메소드 오버로딩
 		// 메서드 타입은 달라도됨, 매개변수타입이 다르거나 개수가 달라야함
-		// int power(int x, int y) {..} 매개변수 타입이 같으면 이름이 달라도 오버로딩 안됨
+		// int power(int x, int y) {..}  이름이 달라도 오버로딩 안됨
 		// double power(int j, int k) {..} 컴파일오류
 
 		Calculator cal = new Calculator();

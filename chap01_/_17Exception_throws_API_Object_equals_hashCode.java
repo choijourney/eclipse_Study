@@ -3,9 +3,9 @@ package chap01_;
 import java.util.HashMap;
 
 import chap01_.key.Key;
-import chap01_.member.Member;
+import chap01_.key.Member;
 
-public class _17 {
+public class _17Exception_throws_API_Object_equals_hashCode {
 
 	public static void main(String[] args) {
 		// 예외
@@ -62,7 +62,7 @@ public class _17 {
 			// 어디서 무슨 예외가 발생했는지 콘솔에 보여줘서 개발할때 쓰면 좋음. 프로그램이완성되면 삭제
 		}
 		// main에서도 throws 처리를 할수있는데 실무에선 안씀
-		// main에서 throws 하면 main을 호출하는 jvm(?)에서 e.printStackTrace 로 예외처리
+		// main에서 throws 하면 main을 호출하는 jvm에서 e.printStackTrace 로 예외처리
 
 	}
 
@@ -104,12 +104,12 @@ public class _17 {
 
 		boolean b = obj1.id.equals(obj2.id);
 		System.out.println(b); // false
-
+		// Member클래스에서 equals를 값이 같은지 비교하도록 재정의함
 		// 여러 클래스마다 equals메서드를 오버라이딩해서 쓸수있다
 
 		// 동등 객체 : 객체안의 값이 같을 때(필드 값이같을때) 동등객체라고함
 
-		// hashMap은 키가 같을때 중복값을 허용하지않고
+		// hashMap은 Key가 같을때 중복값을 허용하지않고
 		// 마지막에 새로 추가된 키-값을 사용한다 (앞에있던 키-값 지움)
 		// 지우는 방법은 hashCode가 같은지 먼저 비교를 하고, 같다면
 		// equals로 비교해서 true가 나오면 동등객체로 판단하고 지운다
@@ -140,16 +140,18 @@ public class _17 {
 		// 1 과 1 은 같은객체로 봄
 		// hashCode가 같으면 equals로 비교함
 
-		// equals로 객체의 필드인 number가 같으면 true이도록 재정의
+		// equals를 객체의 필드인 number가 같으면 true이도록 재정의
 		// true가 나오면 동등객체로 판단해서 한번만 저장 하게 돼있음
 		// 값을 떠나서 키로만 비교함
 		// 그래서 map.size로 2가 나옴
 
 		System.out.println("----");
 
-		// 자바는 String이 같으면 같은 hashCode를 갖도록 돼있음
-		// hashCode를 return id.hashCode(); 로 재정의 (Member클래스에서)
+		// 자바는 String이 같으면 같은 hashCode를 갖도록 돼있음. 그래서
+		// hashCode를 return id.hashCode(); 로 재정의 (key.Member클래스에서)
 		// id가 String타입이라 같은 id면 같은 객체로 봄
+		// equals도 값이 같은지 비교하도록 재정의함
+
 		HashMap<Member, String> map2 = new HashMap<>();
 		map2.put(new Member("blue"), "value1");
 		map2.put(new Member("red"), "value2");

@@ -1,6 +1,6 @@
 package chap01_;
 
-public class _08 {
+public class _08method_return {
 
 	public static void main(String[] args) {
 		// 메서드 저장을 해야 컴파일이 돼서 메서드 사용 가능
@@ -53,7 +53,7 @@ public class _08 {
 //			}
 //		}  void는 원래 리턴값이 없고 return을 만나면 메서드를 강제종료 시킨다
 		// return자리에 break쓰면 while문을 빠져나가 아래 Hi를 실행함
-		// retunr은 Hi를 실행하지않고 메서드를 바로 종료시킴
+		// return은 Hi를 실행하지않고 메서드를 바로 종료시킴
 
 		Car gasCar = new Car();
 		gasCar.setGas(5); // gas필드 설정

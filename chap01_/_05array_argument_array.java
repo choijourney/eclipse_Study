@@ -2,7 +2,7 @@ package chap01_;
 
 import java.util.Arrays;
 
-public class _05 {
+public class _05array_argument_array {
 
 	public static void main(String[] args) {
 		// 배열 생성
@@ -51,6 +51,7 @@ public class _05 {
 			total += scores4[i];
 		}
 		System.out.println("평균은 " + total / scores4.length);
+
 	}
 
 	public static double addArr(int[] score2) { // 배열 선언을 인수안에서
